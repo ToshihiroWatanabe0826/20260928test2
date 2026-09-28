@@ -1,0 +1,25 @@
+> github-copilot-harness-workshop@1.0.0 test:coverage
+> vitest run --coverage --coverage.include=public/portal-core.js --coverage.include=src/server-port.ts tests/portal-core.test.ts tests/server-port.test.ts
+
+
+ RUN  v3.2.7 .
+      Coverage enabled with v8
+
+ ✓ tests/server-port.test.ts (9 tests) 4ms
+ ✓ tests/portal-core.test.ts (8 tests) 13ms
+
+ Test Files  2 passed (2)
+      Tests  17 passed (17)
+   Start at  16:36:03
+   Duration  1.39s (transform 104ms, setup 0ms, collect 141ms, tests 17ms, environment 0ms, prepare 602ms)
+
+ % Coverage report from v8
+-----------------|---------|----------|---------|---------|-------------------
+File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+-----------------|---------|----------|---------|---------|-------------------
+All files        |     100 |      100 |     100 |     100 |
+ public          |     100 |      100 |     100 |     100 |
+  portal-core.js |     100 |      100 |     100 |     100 |
+ src             |     100 |      100 |     100 |     100 |
+  server-port.ts |     100 |      100 |     100 |     100 |
+-----------------|---------|----------|---------|---------|-------------------

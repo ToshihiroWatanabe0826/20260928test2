@@ -1,0 +1,26 @@
+> github-copilot-harness-workshop@1.0.0 test:system
+> playwright test
+
+[WebServer]
+[WebServer] > github-copilot-harness-workshop@1.0.0 prestart
+[WebServer] > tsc --outDir dist && node -e "require('node:fs').cpSync('public', 'dist/public', { recursive: true })"
+[WebServer]
+
+[WebServer]
+[WebServer] > github-copilot-harness-workshop@1.0.0 start
+[WebServer] > node dist/src/server.js
+[WebServer]
+
+[WebServer] Workshop starter: http://127.0.0.1:4174/
+
+[WebServer] IT portal: knowledge, announcements, troubleshooting and email drafts.
+
+
+Running 3 tests using 1 worker
+
+
+
+[1/3] tests\system\existing-portal.playwright.ts:23:1 › ST-001〜ST-002 FAQとお知らせを確認する
+[2/3] tests\system\existing-portal.playwright.ts:41:1 › ST-003〜ST-006 解決ナビから相談メールを準備する
+[3/3] tests\system\existing-portal.playwright.ts:90:1 › ST-007〜ST-015 エラー復旧・ARIA・レスポンシブ・テーマを確認する
+  3 passed (12.4s)

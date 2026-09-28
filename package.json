@@ -1,0 +1,38 @@
+{
+  "name": "github-copilot-harness-workshop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "vitest run",
+    "test:system": "playwright test",
+    "lint": "eslint src tests public",
+    "prestart": "tsc --outDir dist && node -e \"require('node:fs').cpSync('public', 'dist/public', { recursive: true })\"",
+    "start": "node dist/src/server.js",
+    "test:unit": "vitest run tests/portal-core.test.ts tests/server-port.test.ts",
+    "test:integration": "vitest run tests/health.test.ts tests/portal.test.ts tests/ui.test.ts tests/portal-client.test.ts",
+    "test:coverage": "vitest run --coverage --coverage.include=public/portal-core.js --coverage.include=src/server-port.ts tests/portal-core.test.ts tests/server-port.test.ts"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@playwright/test": "^1.63.0",
+    "@types/express": "^5.0.3",
+    "@types/node": "^20.19.0",
+    "@types/supertest": "^6.0.3",
+    "@vitest/coverage-v8": "^3.2.7",
+    "eslint": "^9.32.0",
+    "globals": "^16.3.0",
+    "supertest": "^7.1.4",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.39.0",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0",
+    "npm": ">=10"
+  }
+}

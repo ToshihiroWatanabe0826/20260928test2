@@ -1,0 +1,13 @@
+> github-copilot-harness-workshop@1.0.0 test:unit
+> vitest run tests/portal-core.test.ts tests/server-port.test.ts
+
+
+ RUN  v3.2.7 .
+
+ ✓ tests/server-port.test.ts (9 tests) 3ms
+ ✓ tests/portal-core.test.ts (8 tests) 14ms
+
+ Test Files  2 passed (2)
+      Tests  17 passed (17)
+   Start at  16:36:03
+   Duration  906ms (transform 217ms, setup 0ms, collect 354ms, tests 17ms, environment 1ms, prepare 761ms)
